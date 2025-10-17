@@ -54,7 +54,7 @@ else {
 //5. Crea un menú que controle los datos de un array (como una lista de la compra), que permita añadir al final o al principio, 
 // eliminar alguno si existe o borrar todos, y a cada paso actualice (o vuelva a mostrar) la lista completa.
 
-
+/*
 
 let shoppingList = [];
 let option;
@@ -102,3 +102,41 @@ do {
     }
 } while (option !== '6');
 
+*/
+
+7. // Dado un array con precios, aplicar a todos un descuento indicado por prompt.
+
+/*
+
+let prices = [100, 200, 300, 400, 500];
+let discount = parseFloat(prompt("Introduce el porcentaje de descuento a aplicar (por ejemplo, 20 para un 20%):"));
+
+for (let i = 0; i < prices.length; i++) {
+    prices[i] = prices[i] - (prices[i] * (discount / 100));
+}
+
+alert("Precios con descuento aplicado: " + prices.join(", "));
+
+*/
+
+// BONUS: Reutiliza el ejercicio 1 y posteriormente devuelve el array ordenado.
+
+/*
+
+let numbers = [];
+let number;
+
+while (!numbers.includes(0)) {
+    number = parseInt(prompt("Introduce un número (pulsa 0 para terminar):"));
+    numbers.push(number);
+}
+
+alert("La longitud del array es: " + numbers.length);
+
+numbers.sort(function(a, b) {
+    return a - b;
+});
+
+alert("Array ordenado: " + numbers.join(", "));
+
+*/
