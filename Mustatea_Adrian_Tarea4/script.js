@@ -54,7 +54,7 @@ else {
 //5. Crea un menú que controle los datos de un array (como una lista de la compra), que permita añadir al final o al principio, 
 // eliminar alguno si existe o borrar todos, y a cada paso actualice (o vuelva a mostrar) la lista completa.
 
-/*
+
 
 let shoppingList = [];
 let option;
@@ -102,4 +102,3 @@ do {
     }
 } while (option !== '6');
 
-*/
