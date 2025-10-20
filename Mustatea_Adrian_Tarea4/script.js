@@ -104,12 +104,12 @@ do {
 
 */
 
-7. // Dado un array con precios, aplicar a todos un descuento indicado por prompt.
+6. // Dado un array con precios, aplicar a todos un descuento indicado por prompt.
 
 /*
 
 let prices = [100, 200, 300, 400, 500];
-let discount = parseFloat(prompt("Introduce el porcentaje de descuento a aplicar (por ejemplo, 20 para un 20%):"));
+let discount = Number(prompt("Introduce el porcentaje de descuento a aplicar (por ejemplo, 20 para un 20%):"));
 
 for (let i = 0; i < prices.length; i++) {
     prices[i] = prices[i] - (prices[i] * (discount / 100));
