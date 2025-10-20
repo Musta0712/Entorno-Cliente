@@ -121,7 +121,7 @@ alert("Precios con el descuento ya aplicado: " + prices.join(", "));
 
 // BONUS: Reutiliza el ejercicio 1 y posteriormente devuelve el array ordenado.
 
-/*
+
 
 let numbers = [];
 let number;
@@ -137,6 +137,5 @@ numbers.sort(function(a, b) {
     return a - b;
 });
 
-alert("Array ordenado: " + numbers.join(", "));
+alert("El array ordenado es: " + numbers.join(", "));
 
-*/
