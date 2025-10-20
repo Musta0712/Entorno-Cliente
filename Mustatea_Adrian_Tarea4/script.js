@@ -115,7 +115,7 @@ for (let i = 0; i < prices.length; i++) {
     prices[i] = prices[i] - (prices[i] * (discount / 100));
 }
 
-alert("Precios con descuento aplicado: " + prices.join(", "));
+alert("Precios con el descuento ya aplicado: " + prices.join(", "));
 
 */
 
@@ -127,7 +127,7 @@ let numbers = [];
 let number;
 
 while (!numbers.includes(0)) {
-    number = parseInt(prompt("Introduce un número (pulsa 0 para terminar):"));
+    number = Number(prompt("Introduce un número (pulsa 0 para terminar):"));
     numbers.push(number);
 }
 
