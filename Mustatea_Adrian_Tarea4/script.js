@@ -6,7 +6,7 @@ let numbers = [];
 let number;
 
 while (!numbers.includes(0)) {
-    number = parseInt(prompt("Introduce un número (pulsa 0 para terminar):"));
+    number = Number(prompt("Introduce un número (pulsa 0 para terminar):"));
     numbers.push(number);
 }
 
@@ -121,7 +121,7 @@ alert("Precios con el descuento ya aplicado: " + prices.join(", "));
 
 // BONUS: Reutiliza el ejercicio 1 y posteriormente devuelve el array ordenado.
 
-
+/*
 
 let numbers = [];
 let number;
@@ -139,3 +139,4 @@ numbers.sort(function(a, b) {
 
 alert("El array ordenado es: " + numbers.join(", "));
 
+*/
