@@ -138,7 +138,7 @@ function getPalindromes(words) {
     });
 }
 
-const words = ["ana", "ojo","javascript", "html", "radar", "nivel", "LaRutaNatural"];
+const words = ["ana", "ojo", "javascript", "html", "radar", "nivel", "LaRutaNatural"];
 const palindromes = getPalindromes(words);
 
 console.log(palindromes);
