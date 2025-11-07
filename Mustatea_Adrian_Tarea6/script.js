@@ -64,7 +64,7 @@ console.log(variable);
 
 // 5. Función que cuente el número de vocales de una palabra.
 
-
+/*
 
 function countVowels(word) {
   const vowels = "aeiouáéíóúüAEIOUÁÉÍÓÚÜ";
@@ -77,11 +77,9 @@ function countVowels(word) {
   }
   return count;
 }
-const vowelCount = countVowels("pingüino");
+console.log(countVowels("pingüino"));
 
-console.log(countVowels);
-
-
+*/
 
 // 6. Función que reciba tres parámetros (a,b,c) y devuelva un array con las soluciones de una ecuación de segundo grado. (-b+-sqrt(b**2-4*a*c)/2*a)
 
