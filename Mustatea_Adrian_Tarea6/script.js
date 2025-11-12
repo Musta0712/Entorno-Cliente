@@ -89,9 +89,11 @@ function solveQuadraticEquation(a, b, c) {
     const discriminant = b ** 2 - 4 * a * c;
     if (discriminant < 0) {
         return []; // No hay soluciones reales
+
     } else if (discriminant === 0) {
         const solution = -b / (2 * a);
         return [solution]; // Una solución real
+
     } else {
         const sqrtDiscriminant = Math.sqrt(discriminant);
         const solution1 = (-b + sqrtDiscriminant) / (2 * a);
@@ -140,8 +142,8 @@ console.log(sum);
 
 function getPalindromes(words) {
     return words.filter(word => {
-        const lower = word.toLowerCase();
-        const reversed = lower.split('').reverse().join('');
+        const lower = word.toLowerCase(); 
+        const reversed = lower.split('').reverse().join(''); // convierte la cadena en un array de caracteres y junta los caracteres
         return lower === reversed;
     });
 }
