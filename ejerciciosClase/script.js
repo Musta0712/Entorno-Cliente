@@ -17,9 +17,15 @@ console.log(sumArray(numbers));
 
 // 2. Funcion que devuelve el string recibido en orden invreso con recursividad.
 
-function Reverse(word, index = 0) {
-  if (index >= word.length) return " ";
-  return word[word.length - 1 - index] + Reverse(word, index + 1);
+/*
+function reverse(word, index = 0) {
+    if (index >= word.length) {
+        return " ";
+    } else {
+        return word[word.length - 1 - index] + reverse(word, index + 1);
+    }
 }
 
-console.log(Reverse("El pokemon zekrom es el mejor"));
+console.log(reverse("El pokemon zekrom es el mejor"));
+
+*/
