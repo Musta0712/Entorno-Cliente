@@ -13,7 +13,7 @@ console.log(variable);
 
 // 2. Función calculadora de número factorial.
 
-
+/*
 
 function calculateFactorial(number) {
     if (number === 1) {
@@ -26,7 +26,7 @@ function calculateFactorial(number) {
 variable = calculateFactorial(5);
 console.log(variable);
 
-
+*/
 
 // 3.Función que convierta grados Celsius a Fahrenheit.
 
