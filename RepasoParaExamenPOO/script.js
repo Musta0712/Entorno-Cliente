@@ -248,3 +248,144 @@ const media = estadisticas.calcularMedia();
 console.log(`Nota Media de la Clase: ${media.toFixed(2)}`); // Usamos toFixed(2) para mejor presentación
 
 */
+
+/*
+
+class Empleado {
+    constructor (nombre, sueldoBase, horasTrabajadas) {
+        this.nombre = nombre;
+        this.sueldoBase = sueldoBase;
+        this.horasTrabajadas = horasTrabajadas;
+    }
+
+    calcularSueldo() {
+        if (this.horasTrabajadas <= 40) {
+            return this.sueldoBase;
+        } else {
+            const horasExtras = this.horasTrabajadas -40;
+            return this.sueldoBase + horasExtras * 10;
+        }
+    }
+
+    mostrarResuemn() {
+        return `Empleado: ${this.nombre}
+        Sueldo base: ${this.sueldoBase}€
+        Horas trabajadas: ${this.horasTrabajadas}
+        Sueldo total: ${this.calcularSueldo()}€`;
+    }
+}
+
+const e1 = new Empleado("Ana", 1000, 42);
+const e2 = new Empleado("Luis", 1200, 38);
+const e3 = new Empleado("Marta", 1100, 50);
+
+const empleados = [e1, e2, e3];
+
+let mayor = empleados[0];
+
+for (let emp of empleados) {
+  if (emp.calcularSueldo() > mayor.calcularSueldo()) {
+    mayor = emp;
+  }
+}
+
+console.log("=== EMPLEADO QUE MÁS COBRA ===");
+console.log(mayor.mostrarResuemn());
+
+*/
+
+
+/*
+
+class Animal {
+    constructor (nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    sonido() {
+        return "Este animal hace un sonido"
+    }
+}
+
+class Perro extends Animal {
+    sonido() {
+        return "Guau";
+    }
+}
+
+class Gato extends Animal {
+    sonido() {
+        return "Miau";
+    }
+}
+
+const animales = [
+    new Perro("Rex", 5),
+    new Gato("Luna", 3),
+    new Perro("Toby", 2),
+    new Gato("Misi", 4)
+];
+
+
+animales.forEach(a => {
+    console.log(`${a.nombre} dice: ${a.sonido()}`);
+});
+
+*/
+
+class Figura {
+    area() {
+        return 0;
+    }
+}
+
+class Triangulo extends Figura {
+    constructor (base, altura) {
+        super();
+        this.base = base;
+        this.altura = altura;
+    }
+
+    area() {
+        return (this.base * this.altura) / 2;
+    }
+}
+
+class Rectangulo extends Figura {
+    constructor (ancho, alto) {
+        super();
+        this.ancho = ancho;
+        this.alto = alto;
+    }
+
+    area() {
+        return this.ancho * this.alto;
+    }
+}
+
+class Circulo extends Figura {
+    constructor (radio) {
+        super();
+        this.radio = radio;
+    }
+
+    area() {
+        return Math.PI * this.radio **2;
+    }
+}
+
+const figuras = [
+  new Triangulo(10, 5),
+  new Rectangulo(4, 8),
+  new Circulo(3)
+];
+
+// Calcular área total
+let areaTotal = figuras.reduce((suma, figura) => suma + figura.area(), 0);
+
+// Mostrar resultados
+console.log("Áreas individuales:");
+figuras.forEach(f => console.log(f.area()));
+
+console.log("Área total:", areaTotal);
