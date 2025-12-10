@@ -6,10 +6,9 @@ class Person {
         this.edad = edad;
         this.ciudad = ciudad;
     }
-
-    person = new Person("Diego", 27, "Madrid");
-
 };
+
+const persona = new Person("Diego", 27, "Madrid");
 
 // 2. Acceder a sus propiedades con . 
 console.log(persona.nombre);  // "Diego"
