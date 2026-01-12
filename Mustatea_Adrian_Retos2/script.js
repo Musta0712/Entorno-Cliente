@@ -6,11 +6,11 @@
 
 // Obtiene una cookie por su nombre sin afectar a las demás
 const getCookie = (nombre) => {
-  const cookies = document.cookie.split(';');
+  const cookies = document.cookie.split("; ");
   for (let cookie of cookies) {
-    cookie = cookie.trim();
+    cookie = cookie.trim(); // Elimina espacios en blanco al inicio.
     if (cookie.startsWith(`${nombre}=`)) {
-      return cookie.substring(nombre.length + 1);
+      return cookie.substring(nombre.length + 1); // Saca solo el valor
     }
   }
   return null;
@@ -24,16 +24,16 @@ const setCookie = (name, value, options = {}) => {
   };
 
   if (options.expires === undefined) {
-    const date = new Date();
+    const date = new Date(); 
     date.setDate(date.getDate() + 30);
     options.expires = date;
   }
 
   if (options.expires.toUTCString) {
-    options.expires = options.expires.toUTCString();
+    options.expires = options.expires.toUTCString(); // Convierte la fecha al formato requerido por las cookies
   }
 
-  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value); // evita errores con caracteres especiales
 
   for (const key in options) {
     updatedCookie += "; " + key;
