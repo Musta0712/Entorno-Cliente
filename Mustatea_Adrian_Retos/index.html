@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reto</title>
+
+  <style>
+    body.claro {
+      background-color: white;
+      color: black;
+    }
+
+    body.oscuro {
+      background-color: #2e2d2d;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="mensaje">Página de prueba UT6 </h1>
+
+  <p> Párrafo uno </p>
+  <p> Párrafo Ddos </p>
+  <p> Párrafo tres </p>
+
+  <script>
+    // Apuntes
+
+    /*LocalStorage permite guardar información en el navegador de forma persistente, por lo que al recargar la página 
+        se mantiene la preferencia del usuario sin volver a pedirla.*/
+
+    /*Las cookies permiten almacenar información en el navegador. Si no se define max-age o expires, 
+        la cookie es de sesión y se elimina al cerrar el navegador.*/
+
+    /* 1. PROMPT CAMBIO DE COLOR  */
+    const color = prompt("Introduce un color para los párrafos (En inglés):");
+    const parrafos = document.querySelectorAll("p");
+
+    parrafos.forEach(p => {
+      p.setAttribute("style", `color: ${color};`);
+    });
+
+    /* 2. Almacenar preferencia de estilo con LocalStorage  */
+    const body = document.body;
+
+    let tema = localStorage.getItem("tema");
+
+    if (!tema) {
+    let respuesta = prompt("Elige tu tema: claro u oscuro");
+    tema = respuesta ? respuesta.toLowerCase() : "claro";      
+    if (tema !== "oscuro") {
+        tema = "claro";
+      }
+      localStorage.setItem("tema", tema);
+    }
+
+    if (tema === "oscuro") {
+      body.classList.add("oscuro");
+      body.classList.remove("claro");
+    } else {
+      body.classList.add("claro");
+      body.classList.remove("oscuro");
+    }
+
+    /* 3. Almacenar preferencia de estilo con Cookies  */
+    document.cookie = "tema=" + tema + "; max-age=31536000; path=/";
+  </script>
+</body>
+</html>
