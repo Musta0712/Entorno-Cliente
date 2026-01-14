@@ -33,7 +33,7 @@ if (answer.toLowerCase() === "si") {
 
 */
 
-// 4. Mostrar en consola cuántas páginas hay en el historial del navegadorç
+// 4. Mostrar en consola cuántas páginas hay en el historial del navegador
 
 /*
 
