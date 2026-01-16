@@ -108,7 +108,7 @@ boton.addEventListener("click", function () {
     contador.textContent = count;
 
     // Cuando llega a 10, lanzamos el evento
-    if (count === 10) {
+    if (count == 10) {
         document.dispatchEvent(new Event("llegaADiez"));
     }
 });
