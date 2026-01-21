@@ -1,0 +1,78 @@
+/* 1. Configuración general */
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. El contenedor (color marrón de la imagen) */
+#game {
+    background-color: #c69c7c;
+    width: 550px;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 3. Estadísticas en la parte superior */
+#stats {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#stats div {
+    background-color: #c69c7c;
+    border: 3px solid #5e4339;
+    padding: 10px;
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+}
+
+/* 4. Área de texto (cuadro claro redondeado) */
+#texto {
+    background-color: #f7e1cf;
+    border: 2px solid #bdc3c7;
+    border-radius: 25px;
+    margin: 20px 0;
+    padding: 30px;
+    min-height: 120px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* 5. BOTONES HORIZONTALES */
+#botones {
+    display: flex;
+    flex-direction: row; /* Esto los pone uno al lado del otro */
+    justify-content: space-between; /* Deja espacio igual entre ellos */
+    gap: 15px; /* Espacio entre botones */
+}
+
+button {
+    background-color: #5e4339;
+    color: white;
+    border: 2px solid #8d6e63;
+    border-radius: 12px;
+    padding: 15px 5px;
+    flex: 1; /* Hace que todos los botones midan lo mismo */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4e342e;
+}
+
+button:active {
+    transform: scale(0.98);
+}
