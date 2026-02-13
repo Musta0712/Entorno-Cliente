@@ -17,7 +17,7 @@ const lugares = [
     },
     {
         nombre: "tienda",
-        texto: "El orco tiembla: 'Ese monstruo no es lo que parece si necesitas algo avisame, prepárate bien y suerte la vas a necesitar'.",
+        texto: "El orco tiembla: 'Ese monstruo no es lo que parece si necesitas algo avisame pero te saldrá caro, prepárate bien y suerte la vas a necesitar'.",
         botones: ["Comprar salud (10 oro)", "La Dracofagia (300 oro)", "Volver al pueblo"],
         acciones: [comprarSalud, comprarArma, irPueblo]
     }
