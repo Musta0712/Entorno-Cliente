@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Libros Stephen King</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+    }
+
+    #contenedor {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    th {
+      background: #6c5ce7;
+      color: white;
+      padding: 14px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 12px;
+      transition: background 0.3s ease;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8f9ff;
+    }
+
+    tr:hover {
+      background-color: #ececff;
+      transform: scale(1.01);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: none;
+    }
+
+    .error {
+      color: #ff4757;
+      font-weight: 600;
+      background: #ffe6e9;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    #tabla-libros img {
+        border-radius: 5px;
+        object-fit: cover;
+        height: 150px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Libros de Stephen King</h1>
+
+  <div id="contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Año</th>
+          <th>Imagen</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-libros"></tbody>
+    </table>
+  </div>
+
+    <script src="script.js"></script>
+    <script src="bonus.js"></script>
+
+</body>
+</html>
