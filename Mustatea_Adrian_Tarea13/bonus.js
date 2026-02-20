@@ -14,12 +14,10 @@ async function obtenerLibros() {
     books.forEach(book => {
       const row = document.createElement("tr");
 
-      // Columna Título
       const titleCell = document.createElement("td");
       titleCell.textContent = book.Title;
       row.appendChild(titleCell);
 
-      // Columna Año
       const yearCell = document.createElement("td");
       yearCell.textContent = book.Year;
       row.appendChild(yearCell);
