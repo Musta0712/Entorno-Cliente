@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+            background: linear-gradient(135deg, #ff0000 50%, #000 50%);
+            min-height: 100vh;
+            text-align: center;
+            color: white;
+            }
+
+            .titulo {
+            margin-top: 30px;
+            font-size: 3rem;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 0 #000;
+            }
+
+            .controls {
+            margin: 30px;
+            }
+
+            input, select {
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            margin: 5px;
+            font-size: 1rem;
+            }
+
+            button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #ffcc00;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            }
+
+            button:hover {
+            background-color: #ffaa00;
+            transform: scale(1.05);
+            }
+
+            .pokedex {
+                background: #d32f2f;
+                width: 320px;
+                margin: auto;
+                padding: 60px 20px 20px 20px;
+                border-radius: 20px;
+                box-shadow: 
+                    inset -5px -5px 15px rgba(0,0,0,0.5),
+                    inset 5px 5px 15px rgba(255,255,255,0.2),
+                    0 10px 25px rgba(0,0,0,0.5);
+                position: relative;
+            }
+
+            .pokedex::before {
+                content: "";
+                position: absolute;
+                top: -30px;
+                left: 20px;
+                width: 60px;
+                height: 60px;
+                background: #00bcd4;
+                border-radius: 50%;
+                border: 5px solid white;
+                box-shadow: 0 0 20px #00e5ff;
+            }
+
+            .pokedex img {
+            width: 200px;
+            margin: 15px 0;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            }
+
+            #nombre {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            text-shadow: 2px 2px 0 black;
+            }
+
+            #id, #tipo {
+            margin: 5px 0;
+            font-size: 1rem;
+            }
+
+            .oculto {
+            display: none;
+            }
+    </style>
+<body>
+
+  <h1 class="titulo">POKÉDEX</h1>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Buscar Pokémon">
+    <button id="btnBuscar">Buscar</button>
+
+    <select id="pokemonSelect">
+      <option value="">Selecciona un Pokémon</option>
+    </select>
+  </div>
+
+  <div id="pokemonCard" class="pokedex oculto">
+    <h2 id="nombre"></h2>
+    <p id="id"></p>
+    <p id="tipo"></p>
+    <img id="imagen" src="">
+    <button id="btnSonido">🔊 Sonido</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
