@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamenFinal</title>
+</head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+            background: rgb(230, 126, 28);
+            min-height: 100vh;
+            text-align: center;
+            color: white;
+            }
+
+        .titulo {
+            margin-top: 30px;
+            font-size: 3rem;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 0 #000;
+            }
+
+        .controls {
+            margin: 30px;
+            }
+
+        input, select {
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            margin: 5px;
+            font-size: 1rem;
+            }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #ffcc00;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            }
+
+        button:hover {
+            background-color: #ffaa00;
+            transform: scale(1.05);
+            }
+
+        #nombre {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            text-shadow: 2px 2px 0 black;
+            }
+
+        #diet, #type, #color {
+            margin: 5px 0;
+            font-size: 1rem;
+            }
+
+        .oculto {
+            display: none;
+            }
+    </style>
+<body>
+    <h1 class="titulo">Búsqueda animal</h1>
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Buscar Animal">
+            <button id="btnBuscar">Buscar</button>
+    </div>
+
+    <div id="animalCard" class="oculto">
+    <h2 id="nombre"></h2>
+    <p id="diet"></p>
+    <p id="type"></p>
+    <p id="color"></p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
